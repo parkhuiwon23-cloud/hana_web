@@ -17,7 +17,7 @@ const opts = {
   target: ['es2020'],
   jsx: 'automatic',
   loader: { '.js': 'jsx' },
-  define: { 'process.env.NODE_ENV': '"production"' },
+  define: { 'process.env.NODE_ENV': '"production"', __BUILD__: JSON.stringify(String(Date.now())) },
   outdir: out,
   logLevel: 'info',
 };
